@@ -1,0 +1,11 @@
+{
+  "name": "next-testcafe-build",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/formatlos/next-testcafe-build",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/formatlos/next-testcafe-build"
+  }
+}
