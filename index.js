@@ -24,6 +24,15 @@ module.exports = (nextConfig = {}) => {
             break;
           }
         }
+
+        if (config.optimization && config.optimization.minimizer) {
+          config.optimization.minimizer.forEach(plugin => {
+            if (plugin.constructor.name === 'TerserPlugin') {
+              plugin.options.terserOptions.keep_fnames = true;
+              plugin.options.terserOptions.keep_classnames = true;
+            }
+          });
+        }
       }
 
       if (typeof nextConfig.webpack === 'function') {
